@@ -28,7 +28,8 @@ type (
 
 const (
 	// MinRequiredSubnets is the minimum required number of subnets
-	MinRequiredSubnets = 2
+	// For distributed ML training (allReduce) it is best to have all nodes in the same subnet
+	MinRequiredSubnets = 1
 	// RecommendedSubnets is the recommended number of subnets
 	RecommendedSubnets = 3
 	// SubnetTopologyPrivate represents privately-routed subnets
